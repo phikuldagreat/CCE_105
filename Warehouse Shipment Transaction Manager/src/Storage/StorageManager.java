@@ -5,9 +5,6 @@ import persistence.StoragePersistence;
 
 import java.util.List;
 
-/**
- * Handles adding, removing, and listing items in storage.
- */
 public class StorageManager implements IStorageManager {
     private List<Item> items;
     private StoragePersistence persistence = new StoragePersistence();
