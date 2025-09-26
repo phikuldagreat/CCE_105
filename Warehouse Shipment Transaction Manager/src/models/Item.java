@@ -9,10 +9,9 @@ public class Item {
     private String status; // incoming, outgoing, in-storage
     private int quantity;
 
-    public Item(String code, String name, String status, int quantity) {
+    public Item(String code, String name, int quantity) {
         this.code = code;
         this.name = name;
-        this.status = status;
         this.quantity = quantity;
     }
 
