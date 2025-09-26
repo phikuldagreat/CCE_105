@@ -11,10 +11,8 @@ public class Truck {
     private String plate;
 
     // Corrected constructor order: code, name, quantity, driver, plate
-    public Truck(String code, String name, int quantity, String driver, String plate) {
+    public Truck(String code, String driver, String plate) {
         this.code = code;
-        this.name = name;
-        this.quantity = quantity;
         this.driver = driver;
         this.plate = plate;
     }
