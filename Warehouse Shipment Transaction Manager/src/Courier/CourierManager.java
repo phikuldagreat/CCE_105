@@ -5,9 +5,6 @@ import persistence.CourierPersistence;
 
 import java.util.List;
 
-/**
- * Handles accepting, declining, and listing trucks.
- */
 public class CourierManager implements ICourierManager {
     private List<Truck> trucks;
     private CourierPersistence persistence = new CourierPersistence();
@@ -16,7 +13,6 @@ public class CourierManager implements ICourierManager {
         trucks = persistence.loadTrucks();
     }
 
-    @Override
     public void acceptTruck(Truck truck) {
         if (trucks.size() < 20) {
             trucks.add(truck);
@@ -26,13 +22,11 @@ public class CourierManager implements ICourierManager {
         }
     }
 
-    @Override
-    public void declineTruck(String plate) {
+    public void declineTruck(String code, String plate) {
         trucks.removeIf(t -> t.getPlate().equals(plate));
         persistence.saveTrucks(trucks);
     }
 
-    @Override
     public List<Truck> getAllTrucks() {
         return trucks;
     }
