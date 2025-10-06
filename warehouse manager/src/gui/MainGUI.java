@@ -27,7 +27,7 @@ public class MainGUI extends JFrame {
     private rollback.RollbackManager rollbackManager;
 
     public MainGUI() {
-        setTitle("Warehouse System");
+        setTitle("SHIP-O-MATIC 3000");
         setBounds(300, 0, 900, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
@@ -452,3 +452,4 @@ public class MainGUI extends JFrame {
         SwingUtilities.invokeLater(() -> new MainGUI().setVisible(true));
     }
 }
+
