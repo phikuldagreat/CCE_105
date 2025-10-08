@@ -153,9 +153,9 @@ public class MainGUI extends JFrame {
         completeOrderBtn.addActionListener(e -> {
             int r = deliveryTable.getSelectedRow();
             if (r >= 0) {
-                String itemCode = (String) deliveryTable.getValueAt(r, 0);
+                String itemName = (String) deliveryTable.getValueAt(r, 1);
                 deliveryModel.removeRow(r);
-                JOptionPane.showMessageDialog(this, "Order for item code " + itemCode + " completed!");
+                JOptionPane.showMessageDialog(this, "Order for item: " + itemName + " completed!");
             } else {
                 JOptionPane.showMessageDialog(this, "Please select a delivery to complete.");
             }
@@ -451,3 +451,4 @@ public class MainGUI extends JFrame {
         SwingUtilities.invokeLater(() -> new MainGUI().setVisible(true));
     }
 }
+
